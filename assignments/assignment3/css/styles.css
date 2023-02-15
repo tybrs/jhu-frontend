@@ -53,23 +53,9 @@ h1#header-brand {
   margin: 2.5%;
 }
 
-/* Simple Responsive Framework. */
 .row {
   margin-bottom: 5%;
 }
-
-/* .chicken-color {
-  background-color: #d59898;
-}
-
-.beef-color {
-  background-color: #c14543;
-  color: white;
-}
-
-.sushi-color {
-  background-color: #e5d198;
-} */
 
 #nav-list > li {
   font-size: 125%;
