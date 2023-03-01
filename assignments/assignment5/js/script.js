@@ -12,7 +12,6 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
 (function (global) {
 
 var dc = {};
-var aboutHtmlUrl = "snippets/about.html";
 var homeHtmlUrl = "snippets/home-snippet.html";
 var allCategoriesUrl =
   "https://coursera-jhu-default-rtdb.firebaseio.com/categories.json";
@@ -118,7 +117,7 @@ function buildAndShowHomeHTML (categories) {
       var homeHtmlToInsertIntoMainPage = insertProperty(
         homeHtml,
         "randomCategoryShortName",
-        "'"+chosenCategoryShortName+"'");
+        "'" + chosenCategoryShortName + "'");
 
 
       // TODO: STEP 4: Insert the produced HTML in STEP 3 into the main page
