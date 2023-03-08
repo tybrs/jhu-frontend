@@ -21,11 +21,11 @@
             listItems = listItems.filter(item => item && item != " ")
             //get message
             if (listItems.length == 0) {
-                $scope.messageStyle = { color: "red", border: "1px solid red" };
+                $scope.messageStyle = { color: "red", padding: "5px", border: "2px dashed red" };
                 return "Please enter data first!" 
             }
             // otherwise when listItems is more than zero message color is green 
-            $scope.messageStyle = { color: "green", border: "1px solid green" };
+            $scope.messageStyle = { color: "green", padding: "5px", border: "2px dashed green" };
             
             if (listItems.length <= 3) {
                 return "Enjoy!"
