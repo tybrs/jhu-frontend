@@ -17,7 +17,6 @@
         this.moveItemToBought = (item) => {
           ShoppingListCheckOffService.moveItemToBought(item);
         };
-        ShoppingListCheckOffService.moveItemToBought({ name: "Cookies", quantity: 4, pricePerItem: 4})
       }
 
     function AlreadyBoughtController(ShoppingListCheckOffService) {
