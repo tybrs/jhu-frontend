@@ -28,11 +28,11 @@
 
     function ShoppingListCheckOffService() {
         const buyItems = [
-            { name: "Cookies", quantity: 4, pricePerItem: 4},
-            { name: "Ice Cream", quantity: 1, pricePerItem: 7},
-            { name: "Pie", quantity: 3, pricePerItem: 2},
-            { name: "Cake", quantity: 2, pricePerItem: 3},
-            { name: "Donuts", quantity: 10, pricePerItem: 1}
+            { name: "Cookie(s)", quantity: 4, pricePerItem: 4},
+            { name: "Ice Cream(s)", quantity: 1, pricePerItem: 7},
+            { name: "Pie(s)", quantity: 3, pricePerItem: 2},
+            { name: "Cake(s)", quantity: 2, pricePerItem: 3},
+            { name: "Donut(s)", quantity: 10, pricePerItem: 1}
         ];
         const boughtItems = [];
 
