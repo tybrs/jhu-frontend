@@ -1,0 +1,13 @@
+<table ng-if="controller.found.length > 0">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Action</th>
+  </tr>
+  <tr ng-repeat="item in controller.found track by $index">
+    <td>{{ item.name }}</td>
+    <td>{{ item.description }}</td>
+    <td><button ng-click="controller.onRemove({$index});">Remove Item</button></td>
+  </tr>
+</table>
+<span ng-if="(!controller.found.length) && controller.query">No items found.</span>
