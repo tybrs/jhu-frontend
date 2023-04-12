@@ -2,9 +2,9 @@
   <tr>
     <th>Name</th>
     <th>Description</th>
-    <th>Action</th>
+    <th>Remove</th>
   </tr>
-  <tr ng-repeat="item in controller.found track by $index">
+  <tr ng-repeat="item in controller.found">
     <td>{{ item.name }}</td>
     <td>{{ item.description }}</td>
     <td><button ng-click="controller.onRemove({$index});">Remove Item</button></td>
