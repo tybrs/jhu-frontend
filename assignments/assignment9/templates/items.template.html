@@ -1,0 +1,13 @@
+<a ui-sref="homeState">Home</a> &gt; 
+<a ui-sref="categoryState">Categories</a> &gt; 
+<a ui-sref="itemState({categoryShortName: '{{ itemCtrl.category }}'})">{{ itemCtrl.category }} </a>
+
+<h2>{{ itemCtrl.category }} Items</h2>
+
+<ul>
+    <li ng-repeat="item in itemCtrl.items">
+        {{ item.short_name }}: {{ item.name }} 
+    </li>
+</ul>
+  
+
