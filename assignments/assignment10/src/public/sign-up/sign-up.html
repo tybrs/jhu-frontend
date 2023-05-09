@@ -1,0 +1,81 @@
+<h1>Sign Up for Our Newsletter!</h1>
+
+<fieldset id="sign-up">
+    <legend>Registration</legend>
+    <form name='userForm' novalidate>
+    <input type="text" name="firstname" placeholder="First Name"
+        ng-model="ctrl.firstname"
+        required
+        minlength="1"
+        ng-maxlength="100">
+    <br>
+    <span class="error-msg"
+        ng-if="(userForm.firstname.$error.minlength
+        || userForm.firstname.$error.required)
+        && userForm.firstname.$touched">
+    <i>First Name</i> is required
+    </span>
+    <br>
+
+    <input type="text" name="lastname" placeholder="Last Name"
+        ng-model="ctrl.lastname"
+        required
+        minlength="1"
+        ng-maxlength="100">
+    <br>
+    <span class="error-msg"
+        ng-if="(userForm.lastname.$error.minlength
+        || userForm.lastname.$error.required)
+        && userForm.lastname.$touched">
+        <i>Last Name</i> is required
+    </span>
+    <br>
+
+    <input type="email" name="email" placeholder="Email"
+        ng-model="ctrl.email"
+        required>
+    <br>
+    <span class="error-msg"
+        ng-if="userForm.email.$invalid && userForm.email.$touched">
+        Enter a valid email address
+    </span>
+    <br>
+
+    <input type="text" name="phone" placeholder="Phone ###-###-####"
+        ng-model="ctrl.phone"
+        pattern="(\d{3})-(\d{3})-(\d{4})"
+        required>
+    <br>
+    <span class="error-msg" ng-if="userForm.phone.$invalid && userForm.phone.$touched">
+        Enter a valid phone number
+    </span>
+    <br>
+
+    <input type="text" name="favorite" placeholder="Favorite Dish"
+        ng-model="ctrl.favorite"
+        minlength="1"
+        ng-maxlength="15" 
+        required
+        favorite>
+    <br>
+    <span class="error-msg"
+        ng-if="(userForm.favorite.$error.minlength 
+        || userForm.favorite.$error.required) 
+        && userForm.favorite.$touched">
+        You must enter the Menu Number for your Favorite Dish
+    </span>
+    <span class="error-msg"
+    ng-if="userForm.favorite.$error.unknown
+    && userForm.favorite.$touched">
+        No such menu number exists
+    </span>
+    <br>
+    <button
+        ng-disabled="userForm.$invalid || userForm.$pending"
+        ng-click="ctrl.submit()">Submit</button>
+    </form>
+</fieldset>
+
+<div id="info" ng-if="ctrl.registered">
+    Your information has been saved
+</div>

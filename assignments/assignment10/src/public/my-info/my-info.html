@@ -1,0 +1,16 @@
+<h1> Registration Information </h1>
+
+<div id="my-info" ng-if="ctrl.getRegistered()">
+    <b>First Name</b>: {{ ctrl.getFirstName() }} <br>
+    <b>Last Name</b>: {{ ctrl.getLastName() }} <br>
+    <b>Email</b>: {{ ctrl.getEmail() }} <br>
+    <b>Phone</b>: {{ ctrl.getPhone() }} <br>
+    <b>Favorite Dish</b>: {{ ctrl.getFavorite() }} <br>
+    {{ ctrl.getDescription() }} <br>
+    <img src="{{ ctrl.getFavoriteImg() }}" />
+</div>
+
+<div ng-if="!ctrl.getRegistered()">
+    Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a>
+</div>
+
